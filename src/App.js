@@ -57,7 +57,11 @@ function App() {
 
   return (
     <div className="App">
-      {init && <Particles options={particlesOptions} />}
+      {init ? (
+        <Particles options={particlesOptions} />
+      ) : (
+        <div id="tsparticles"></div>
+      )}
       <PageContainer>
         <HeaderContainer>
           <LogoText>ALLKONS</LogoText>
